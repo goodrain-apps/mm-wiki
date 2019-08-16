@@ -8,14 +8,14 @@ fi
 if [ ! -f ${MM_HOME}/conf/inited ];then
 nohup ./install/install > ${MM_HOME}/conf/inited 2>&1 &
 fi
-[[ $PAUSE ]] && sleep $PAUSE
+
 while true
 do
-grep ""
+grep "make conf file success" ${MM_HOME}/conf/inited
 if [ $? == 0 ];then
 break
 fi
 done
 
-
+[[ $PAUSE ]] && sleep $PAUSE
 ./mm-wiki --conf conf/mm-wiki.conf
