@@ -7,4 +7,4 @@ RUN tar xvzf /tmp/mm-wiki-linux-amd64.tar.gz -C /mm_wiki
 COPY start.sh ${MM_HOME}/start.sh
 EXPOSE 8090
 
-ENTRYPOINT ["${MM_HOME}/start.sh"]
+ENTRYPOINT ["/mm_wiki/start.sh"]
