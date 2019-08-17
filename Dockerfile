@@ -9,6 +9,6 @@ RUN echo "http://mirrors.aliyun.com/alpine/v3.4/main/" > /etc/apk/repositories &
     rm -rf /tmp/mm-wiki-linux-amd64.tar.gz
 
 COPY start.sh ${MM_HOME}/start.sh
-EXPOSE 8090
+EXPOSE 8080
 
 ENTRYPOINT ["/mm_wiki/start.sh"]
